@@ -1,3 +1,69 @@
-#slideshow {
-  min-height: 50vh;
+body
+{
+  overflow-x: hidden;
+}
+
+#mainpage-slideshow, .slideshow-img
+{
+  height: 65vh;
+}
+
+#third-row
+{
+  height: 65vh;
+  background-color: #ffb713;
+}
+
+.vertical-center
+{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
+  padding: 15%;
+}
+
+#second-row 
+{
+  margin-top: 5vh;
+}
+
+#tariff-check
+{
+  border-right-style: solid;
+  border-width: 1px;
+}
+
+#tariff-check h2, #tracking h2
+{
+  font-weight: 150;
+  color: #004063;
+}
+
+.btn-mainpage
+{
+  background-color: #004063;
+  border-color: #004063;
+}
+
+.col 
+{
+  padding-right: 7px;
+  max-width: 12%;
+}
+
+.carousel-indicators li {
+  background-color: #ffb713;
+}
+.carousel-indicators .active {
+  background-color: #ffb713;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffb713' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffb713' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }

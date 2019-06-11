@@ -2,14 +2,130 @@
 <!DOCTYPE html>
 <head>
   {% include 'website/common_header.html' %}
+  <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
 </head>
 <body>
 {% include 'website/navbar.html' %}
-<div id="slideshow">
-  ksdknsajkdas
-  dnaskdnaskdnkasd
-  asd samdnskadnkjsad
-  nadaksndnksa
+
+<div class="container-fluid" style="padding: 0">
+  <div id="mainpage-slideshow" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#mainpage-slideshow" data-slide-to="0" class="active"></li>
+      <li data-target="#mainpage-slideshow" data-slide-to="1"></li>
+      <li data-target="#mainpage-slideshow" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100 slideshow-img" src="https://via.placeholder.com/728x400.png?text=Carousel+1" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 slideshow-img" src="https://via.placeholder.com/728x400.png?text=Carousel+2" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 slideshow-img" src="https://via.placeholder.com/728x400.png?text=Carousel+3" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#mainpage-slideshow" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#mainpage-slideshow" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <div class="row" id="second-row">
+    <div class="col-md-6 mb-4" id="tariff-check">
+      <h2 style="text-align: center">Cek Tarif</h2>
+      <form>
+        <div class="form-group row">
+          <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Dari</label>
+          <div class="col-md-6">
+            <select class="form-control" id="tarif-from">
+              <option>Jakarta</option>
+              <option>Bandung</option>
+              <option>Yogya</option>
+              <option>Semarang</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Tujuan</label>
+          <div class="col-md-6">
+            <select class="form-control" id="tarif-from">
+              <option>Jakarta</option>
+              <option>Bandung</option>
+              <option>Yogya</option>
+              <option>Semarang</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Berat</label>
+          <div class="col-md-2" style="padding-right:0">
+            <input type="number" class="form-control" style="width: 80%; margin-right:0">
+          </div>
+          <label for="tarif-from" class="col-md-2 col-form-label" style="padding-left: 0">Kg</label>
+        </div>
+        <div class="form-group row">
+          <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Ukuran</label>
+          <div class="col">
+            <input type="number" class="form-control">
+          </div>
+          <label for="tarif-from" class="col-form-label" style="padding-left: 0">cm x</label>
+          <div class="col">
+            <input type="number" class="form-control">
+          </div>
+          <label for="tarif-from" class="col-form-label" style="padding-left: 0">cm x</label>
+          <div class="col">
+            <input type="number" class="form-control">
+          </div>
+          <label for="tarif-from" class="col-form-label" style="padding-left: 0">cm</label>
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2 mt-3" style="text-align: center">
+            <button type="submit" class="btn btn-primary btn-mainpage">Cek Harga</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 mb-4" id="tracking">
+      <h2 style="text-align: center">Tracking Barang</h2>
+      <form>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <p style="text-align: center">Masukan nomor pengiriman yang anda dapatkan</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <input type="text" class="form-control" placeholder="nomor pengiriman">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2 mt-3" style="text-align: center">
+            <button type="submit" class="btn btn-primary btn-mainpage">Track Barang</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="row" id="third-row">
+    <div class="col-md-6">
+      <div class="vertical-center">
+        <div style="text-align: justify">Pertumbuhan ekonomi Indonesia yang diikuti dengan pertumbuhan sektor industri di seluruh wilayah Indonesia, adalah suatu peluang besar bagi setiap perusahaan yang bergerak di bidang jasa trasnportasi untuk berkiprah di sektor produk-produk hasil industri agar segera dapat dinikmati oleh masyarakat konsumen pada umumnya. </br> Dengan komitmen profesional para pemegang saham yang telah berpengalaman mengelola transportasi angkutan darat yang sebelumnya telah berkiprah dalam jasa trasnportasi angkutan darat bersama PT. BARAKA SARANA TAMA di wilayah DKI Jakarta - Jawa Barat dan Jawa</div>
+        <button type="submit" class="btn btn-primary btn-mainpage mt-2">Baca Lanjut</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid vertical-center" src="{% static 'img/minibus.png' %}">
+    </div>
+  </div>
 </div>
+
 {% include 'website/common_script.html' %}
 </body>
