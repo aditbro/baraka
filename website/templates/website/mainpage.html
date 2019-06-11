@@ -1,5 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
+<html lang="id">
 <head>
   <title>Baraka</title>
   {% include 'website/common_header.html' %}
@@ -40,7 +41,7 @@
         <div class="form-group row">
           <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Dari</label>
           <div class="col-md-6">
-            <select class="form-control">
+            <select class="form-control" id="tarif-from">
               <option>Jakarta</option>
               <option>Bandung</option>
               <option>Yogya</option>
@@ -49,9 +50,9 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Tujuan</label>
+          <label for="tarif-to" class="col-md-2 offset-md-2 col-form-label">Tujuan</label>
           <div class="col-md-6">
-            <select class="form-control">
+            <select class="form-control" id="tarif-to">
               <option>Jakarta</option>
               <option>Bandung</option>
               <option>Yogya</option>
@@ -60,26 +61,26 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Berat</label>
+          <label for="berat" class="col-md-2 offset-md-2 col-form-label">Berat</label>
           <div class="col-md-2" style="padding-right:0">
-            <input type="number" class="form-control" style="width: 80%; margin-right:0">
+            <input type="number" class="form-control" style="width: 80%; margin-right:0" id="berat">
           </div>
-          <label for="tarif-from" class="col-md-2 col-form-label" style="padding-left: 0">Kg</label>
+          <label for="berat" class="col-md-2 col-form-label" style="padding-left: 0">Kg</label>
         </div>
         <div class="form-group row">
-          <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Ukuran</label>
+          <label class="col-md-2 offset-md-2 col-form-label">Ukuran</label>
           <div class="col">
             <input type="number" class="form-control">
           </div>
-          <label for="tarif-from" class="col-form-label" style="padding-left: 0">cm x</label>
+          <label class="col-form-label" style="padding-left: 0">cm x</label>
           <div class="col">
             <input type="number" class="form-control">
           </div>
-          <label for="tarif-from" class="col-form-label" style="padding-left: 0">cm x</label>
+          <label class="col-form-label" style="padding-left: 0">cm x</label>
           <div class="col">
             <input type="number" class="form-control">
           </div>
-          <label for="tarif-from" class="col-form-label" style="padding-left: 0">cm</label>
+          <label class="col-form-label" style="padding-left: 0">cm</label>
         </div>
         <div class="row">
           <div class="col-md-8 offset-md-2 mt-3" style="text-align: center">
@@ -126,3 +127,4 @@
 
 {% include 'website/common_script.html' %}
 </body>
+</html>
