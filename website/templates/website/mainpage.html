@@ -32,8 +32,8 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
-
+</div>
+<div class="container-fluid">
   <div class="row" id="second-row">
     <div class="col-md-6 mb-4" id="tariff-check">
       <h2 style="text-align: center">Cek Tarif</h2>
@@ -65,22 +65,22 @@
           <div class="col-md-2" style="padding-right:0">
             <input type="number" class="form-control" style="width: 80%; margin-right:0" id="berat">
           </div>
-          <label for="berat" class="col-md-2 col-form-label" style="padding-left: 0">Kg</label>
+          <label for="berat" class="col-md-2 col-form-label">Kg</label>
         </div>
         <div class="form-group row">
           <label class="col-md-2 offset-md-2 col-form-label">Ukuran</label>
           <div class="col">
             <input type="number" class="form-control">
           </div>
-          <label class="col-form-label" style="padding-left: 0">cm x</label>
-          <div class="col">
+          <label class="col-form-label">cm x</label>
+          <div class="col" style="padding-left:5px">
             <input type="number" class="form-control">
           </div>
-          <label class="col-form-label" style="padding-left: 0">cm x</label>
-          <div class="col">
+          <label class="col-form-label">cm x</label>
+          <div class="col" style="padding-left:5px">
             <input type="number" class="form-control">
           </div>
-          <label class="col-form-label" style="padding-left: 0">cm</label>
+          <label class="col-form-label">cm</label>
         </div>
         <div class="row">
           <div class="col-md-8 offset-md-2 mt-3" style="text-align: center">
@@ -116,13 +116,13 @@
     <div class="col-md-1"></div>
     <div class="col-md-4">
       <div class="vertical-center">
-        <div style="text-align: justify">Pertumbuhan ekonomi Indonesia yang diikuti dengan pertumbuhan sektor industri di seluruh wilayah Indonesia, adalah suatu peluang besar bagi setiap perusahaan yang bergerak di bidang jasa trasnportasi untuk berkiprah di sektor produk-produk hasil industri agar segera dapat dinikmati oleh masyarakat konsumen pada umumnya. <br> Dengan komitmen profesional para pemegang saham yang telah berpengalaman mengelola transportasi angkutan darat yang sebelumnya telah berkiprah dalam jasa trasnportasi angkutan darat bersama PT. BARAKA SARANA TAMA di wilayah DKI Jakarta - Jawa Barat dan Jawa</div>
+        <div style="text-align: justify" id="narration-div"></div>
         <button type="submit" class="btn btn-primary btn-mainpage mt-2">Baca Lanjut</button>
       </div>
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-6">
-      <img class="img-fluid vertical-center" src="{% static 'img/minibus.png' %}" alt="minibus baraka">
+      <img class="img-fluid vertical-center" id="minibus-img" src="{% static 'img/minibus.png' %}" alt="minibus baraka">
     </div>
   </div>
 </div>
@@ -130,3 +130,14 @@
 {% include 'website/common_script.html' %}
 </body>
 </html>
+<script>
+  narration = "Pertumbuhan ekonomi Indonesia yang diikuti dengan pertumbuhan sektor industri di seluruh wilayah Indonesia, adalah suatu peluang besar bagi setiap perusahaan yang bergerak di bidang jasa trasnportasi untuk berkiprah di sektor produk-produk hasil industri agar segera dapat dinikmati oleh masyarakat konsumen pada umumnya." 
+  narration_plus = "<br> Dengan komitmen profesional para pemegang saham yang telah berpengalaman mengelola transportasi angkutan darat yang sebelumnya telah berkiprah dalam jasa trasnportasi angkutan darat bersama PT. BARAKA SARANA TAMA di wilayah DKI Jakarta - Jawa Barat dan Jawa"
+  narration_div = document.getElementById("narration-div")
+  
+  if(screen.width > 768) {
+    narration = narration + narration_plus
+  }
+
+  narration_div.innerHTML = narration
+</script>

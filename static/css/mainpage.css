@@ -7,6 +7,7 @@ body
 {
   min-height: 500px;
   height: 65vh;
+  min-width: 100vw
 }
 
 #third-row
@@ -43,12 +44,6 @@ body
   border-color: #004063;
 }
 
-.col 
-{
-  padding-right: 7px;
-  max-width: 12%;
-}
-
 .carousel-indicators li {
   background-color: #ffb713;
 }
@@ -64,15 +59,29 @@ body
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffb713' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-.navbar-nav > li {
-  float: left;
-  position: relative;
+@media (min-width: 768px) {
+  .col 
+  {
+    padding-right: 7px;
+    max-width: 12%;
+  }
 }
-.navbar-light .navbar-nav .active a::after {
-  border-top: 7px solid #004063;
-  top: -10px;
-  content: " ";
-  left: 0;
-  position: absolute;
-  right: 0;
+
+@media (max-width: 768px) {
+  #minibus-img {
+    display: none;
+  }
+
+  .col 
+  {
+    padding-right: 7px;
+    max-width: 20%;
+  }
+
+  #tracking {
+    background-color: rgba(255, 183, 19, 0.5);
+    margin-top: 50px;
+    margin-bottom: 0px !important;
+    padding-bottom: 20px;
+  }
 }
