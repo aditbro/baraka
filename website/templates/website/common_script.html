@@ -2,3 +2,8 @@
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/popper.js' %}"></script>
 <script src="{% static 'js/bootstrap.js' %}"></script>
+<script>
+  page = "{{ page }}"
+  active_navbar = document.getElementById("navbar-"+page)
+  active_navbar.className += " active";
+</script>
