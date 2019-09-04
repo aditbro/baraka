@@ -38,7 +38,7 @@
     min-height: 6vh;
   }
 
-  .navbar-light .navbar-nav .active a::after {
+  .navbar-light .navbar-nav .active a::before {
     border-top: 3px solid #004063;
     top: -5px;
     content: " ";

@@ -12,11 +12,13 @@ class LowonganKerja(models.Model):
         ('JATIM', 'Jawa Timur')
     ]
     daerah = models.CharField(max_length=short_text, choices=DAERAH_CHOICES)
-    nama = models.CharField(max_length=long_text)
+    posisi = models.CharField(max_length=long_text)
+    kota = models.CharField(max_length=short_text)
+    jenis = models.CharField(max_length=short_text)
     deskripsi = models.TextField(max_length=long_text)
 
     def __str__(self):
-        return self.nama + " " + self.daerah
+        return self.posisi + " " + self.kota
     
     class Meta:
         verbose_name_plural = "Lowongan Kerja"
