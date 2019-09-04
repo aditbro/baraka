@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Baraka</title>
+  {% include 'website/common_header.html' %}
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include 'website/navbar.html' %}
+<div class="container">
+  <div class="row" id="title-row">
+    <div class="col-md-12">
+      <h1 style="margin-left: 60px; color: #004063; font-weight: 700">Hubungi Kami</h1>
+    </div>
+  </div>
+  <div class="row" id="info-row">
+    <div class="col-md-4 info-col">
+      <img class="img-responsive contact-img" src="{% static "img/location_pin.png" %}" />
+      <br><br>
+      <h2>Alamat Kami</h2>
+      <br>
+      <p>Jalan Raya Setu Gg.Sejahtera Rt 005/001 Cipayung, Jakarta Timur</p>
+    </div>
+    <div class="col-md-4 info-col">
+      <img class="img-responsive contact-img" style="padding-left: 25px" src="{% static "img/phone.png" %}" />
+      <br><br>
+      <h2>Telepon</h2>
+      <br>
+      <div style="font-weight: 700">Marketing</div>
+      <div>0813 8004 6665</div>
+      <div>0813 8348 6105 (WhatsApp)</div>
+      <br>
+      <div style="font-weight: 700">Layanan paket dari Jakarta ke daerah</div>
+      <div>0812 8290 8302</div>
+      <div>0812 9072 3912 (WhatsApp)</div>
+      <br>
+      <div style="font-weight: 700">Layanan paket dari daerah ke Jakarta</div>
+      <div>0812 8044 3372</div>
+    </div>
+    <div class="col-md-4 info-col">
+      <img class="img-responsive contact-img" src="{% static "img/mail.png" %}" />
+      <br><br>
+      <h2>Email Kami</h2>
+      <br>
+      <p>cs@basarta.co.id</p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="margin-top: 50px">
+  <div class="row" id="slogan-row">
+    <div class="col-md-12" style="text-align: center">
+      <h2 id="slogan">"Kami akan senang <span style="font-weight: 1000">mendengar</span> dan <span style="font-weight: 1000">membantu</span> anda"</h2>
+    </div>
+  </div>
+</div>
+{% include 'website/common_footer.html' %}
+</body>
+{% include 'website/common_script.html' %}

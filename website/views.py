@@ -8,3 +8,7 @@ def main(request):
 def about_us(request):
     context = { 'page' : 'about-us' }
     return render(request, 'website/about_us.html', context)
+
+def contact(request):
+    context = { 'page' : 'contact' }
+    return render(request, 'website/contact.html', context)
