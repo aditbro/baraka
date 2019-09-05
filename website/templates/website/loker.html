@@ -26,6 +26,7 @@
   </div>
   {% else %}
     {% for lowongan in loker %}
+    <a class="loker-link" href="/detail_lowongan/{{ lowongan.id }}">
     <div class="row loker-row">
       <div class="col-md-4" style="font-weight: 1000">
         {{ lowongan.posisi }}
@@ -37,6 +38,7 @@
         {{ lowongan.jenis }}
       </div>
     </div>
+    </a>
     {% endfor %}
   {% endif %}
 </div>

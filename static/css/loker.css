@@ -4,3 +4,8 @@
     font-size: 1.5em;
     margin-bottom: 80px
 }
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: inherit;
+    color: inherit
+}

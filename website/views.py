@@ -33,3 +33,11 @@ def loker_jakarta(request):
     data_loker = LowonganKerja.objects.filter(daerah="JKT")
     context = { 'page' : 'career', 'loker' : data_loker, 'img': 'banner_dki_jakarta.png' }
     return render(request, 'website/loker.html', context)
+
+def loker_detail(request, id):
+    try:
+        data_loker = LowonganKerja.objects.get(id=id)
+        context = { 'page' : 'career', 'loker' : data_loker }
+        return render(request, 'website/loker_detail.html', context)
+    except LowonganKerja.DoesNotExist as e:
+        return main(request)

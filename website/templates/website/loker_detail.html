@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Baraka</title>
+  {% include 'website/common_header.html' %}
+  <link rel="stylesheet" href="{% static 'css/loker_detail.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include 'website/navbar.html' %}
+<div class="container">
+  <div class="row" id="title-row">
+    <div class="col-md-6" style="text-align: left">
+      <h1 style="margin-left: 60px; color: #004063; font-weight: 700">{{ loker.posisi }}</h1>
+    </div>
+    <div class="col-md-6" style="text-align: right; color: #004063; margin-top: 15px; font-size: 1.3em">
+      {{ loker.jenis }} | {{ loker.kota }}
+    </div>
+  </div>
+  <div class="row" id="description-row">
+    <div class="col-md-12">
+      <h3 style="margin-top: 30px;">Persyaratan Umum:</h3>
+      <div class="persyaratan">{{ loker.persyaratan|safe }}</div>
+    </div>
+    <div class="col-md-12">
+      <h3 style="margin-top: 30px">Tanggung Jawab:</h3>
+      <div class="persyaratan">{{ loker.persyaratan|safe }}</div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+<div class="container-fluid">
+  <div class="row" id="slogan-row">
+    <div class="col-md-12" style="text-align: center; line-height:25px; font-size: 1.2em">
+      Surat lamaran dan CV harap kirim ke:<br>
+      hrd@basarta.co.id<br>
+      hrdbstjakarta@yahoo.com<br><br>
+      <button type="submit" class="btn btn-primary btn-mainpage mt-2">Lamar Kerja</button>
+    </div>
+  </div>
+  <div class="row" style="background-color: #004063">
+    <div class="col-md-12" style="text-align: center; padding: 3px; color: #db9e12">
+      Copyright© 2019 PT. Baraka Sarana Tama All rights reserved 
+    </div>
+  </div>
+</div>
+</footer>
+</body>
+{% include 'website/common_script.html' %}

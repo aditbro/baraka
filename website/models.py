@@ -1,4 +1,5 @@
 from django.db import models
+from djrichtextfield.models import RichTextField
 
 long_text = 800
 short_text = 20
@@ -15,7 +16,8 @@ class LowonganKerja(models.Model):
     posisi = models.CharField(max_length=long_text)
     kota = models.CharField(max_length=short_text)
     jenis = models.CharField(max_length=short_text)
-    deskripsi = models.TextField(max_length=long_text)
+    persyaratan = RichTextField(field_settings='advanced')
+    tanggung_jawab = RichTextField(field_settings='advanced')
 
     def __str__(self):
         return self.posisi + " " + self.kota
