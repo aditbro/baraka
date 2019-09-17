@@ -17,6 +17,8 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 from website import views
+from baraka import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +31,4 @@ urlpatterns = [
     path('lowongan_kerja/jakarta', views.loker_jakarta),
     path('detail_lowongan/<int:id>/', views.loker_detail),
     path('djrichtextfield/', include('djrichtextfield.urls'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
