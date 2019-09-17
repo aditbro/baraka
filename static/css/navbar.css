@@ -40,7 +40,7 @@
 
   .navbar-light .navbar-nav .active a::before {
     border-top: 3px solid #004063;
-    top: -5px;
+    top: -10px;
     content: " ";
     left: 0;
     position: absolute;
