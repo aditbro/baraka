@@ -13,6 +13,8 @@
 {
   max-height: 8vh;
   min-height: 6vh;
+  margin-right: -35px;
+  margin-left: 20px;
 }
 
 .nav-box {
