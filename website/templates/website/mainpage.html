@@ -42,10 +42,10 @@
           <label for="tarif-from" class="col-md-2 offset-md-2 col-form-label">Dari</label>
           <div class="col-md-6">
             <select class="form-control" id="tarif-from">
-              <option>Jakarta</option>
-              <option>Bandung</option>
-              <option>Yogya</option>
-              <option>Semarang</option>
+              <option disabled selected></option>
+              {% for cabang in cabang_list %}
+                  <option value="{{ cabang.file_ongkos_kirim }}">{{ cabang.lokasi }}</option>
+              {% endfor %}
             </select>
           </div>
         </div>
@@ -53,38 +53,16 @@
           <label for="tarif-to" class="col-md-2 offset-md-2 col-form-label">Tujuan</label>
           <div class="col-md-6">
             <select class="form-control" id="tarif-to">
-              <option>Jakarta</option>
-              <option>Bandung</option>
-              <option>Yogya</option>
-              <option>Semarang</option>
+              <option disabled selected></option>
+              {% for cabang in cabang_list %}
+                  <option id="cabang-opt-{{ cabang.lokasi }}" value="{{ cabang.lokasi }}">{{ cabang.lokasi }}</option>
+              {% endfor %}
             </select>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="berat" class="col-md-2 offset-md-2 col-form-label">Berat</label>
-          <div class="col-md-2" style="padding-right:0">
-            <input type="number" class="form-control" style="width: 80%; margin-right:0" id="berat">
-          </div>
-          <label for="berat" class="col-md-2 col-form-label">Kg</label>
-        </div>
-        <div class="form-group row">
-          <label class="col-md-2 offset-md-2 col-form-label">Ukuran</label>
-          <div class="col">
-            <input type="number" class="form-control">
-          </div>
-          <label class="col-form-label">cm x</label>
-          <div class="col" style="padding-left:5px">
-            <input type="number" class="form-control">
-          </div>
-          <label class="col-form-label">cm x</label>
-          <div class="col" style="padding-left:5px">
-            <input type="number" class="form-control">
-          </div>
-          <label class="col-form-label">cm</label>
-        </div>
         <div class="row">
           <div class="col-md-8 offset-md-2 mt-3" style="text-align: center">
-            <button type="submit" class="btn btn-primary btn-mainpage">Cek Harga</button>
+            <button type="button" id="btn-cek-harga" class="btn btn-primary btn-mainpage">Cek Harga</button>
           </div>
         </div>
       </form>
@@ -140,4 +118,11 @@
   }
 
   narration_div.innerHTML = narration
+
+  document.getElementById("btn-cek-harga").addEventListener("click", moveToHarga);
+
+  function moveToHarga() {
+    link = document.getElementById("tarif-from").value
+    window.location.href = link
+  }
 </script>

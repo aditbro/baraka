@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from website.models import LowonganKerja
+from website.models import LowonganKerja, Cabang
 
-# Create your views here.
 def main(request):
-    context = { 'page' : 'home' }
+    context = { 'page' : 'home', 'cabang_list' : Cabang.objects.all() }
     return render(request, 'website/mainpage.html', context)
 
 def about_us(request):

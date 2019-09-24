@@ -33,7 +33,18 @@ class DataBarang(models.Model):
     status = models.CharField(max_length=short_text)
 
     def __str__(self):
-        return ("Data Barang")
+        return self.pengirim + ", dari: " + self.dari + ", ke: " + self.tujuan
     
     class Meta:
         verbose_name_plural = "Data Barang"
+
+class Cabang(models.Model):
+    lokasi = models.CharField(max_length=long_text)
+    singkatan = models.CharField(max_length=short_text)
+    file_ongkos_kirim = models.CharField(max_length=long_text)
+
+    def __str__(self):
+        return self.lokasi
+        
+    class Meta:
+        verbose_name_plural = "Cabang"
