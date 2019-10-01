@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Baraka</title>
+  {% include 'website/common_header.html' %}
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include 'website/navbar.html' %}
+<div class="container">
+  <div class="row" style="min-height: 55vh; margin-top: 5vh">
+    <div class="col-md-8 offset-md-2">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Lokasi</th>
+            <th>Kode</th>
+            <th>Alamat</th>
+            <th>No Telepon</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for cabang in cabang_list %}
+            <tr>
+              <td>{{ cabang.lokasi }}</td>
+              <td>{{ cabang.kode }}</td>
+              <td>{{ cabang.alamat }}</td>
+              <td>{{ cabang.no_telp }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="margin-top: 50px">
+  <div class="row" id="slogan-row">
+    <div class="col-md-12" style="text-align: center">
+      <h2 id="slogan">"Kami akan senang <span style="font-weight: 1000">mendengar</span> dan <span style="font-weight: 1000">membantu</span> anda"</h2>
+    </div>
+  </div>
+</div>
+{% include 'website/common_footer.html' %}
+</body>
+{% include 'website/common_script.html' %}

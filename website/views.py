@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from website.models import LowonganKerja, Cabang
+from website.models import LowonganKerja, Area, Cabang
 
 def main(request):
-    context = { 'page' : 'home', 'cabang_list' : Cabang.objects.all() }
+    context = { 'page' : 'home', 'area_list' : Area.objects.all() }
     return render(request, 'website/mainpage.html', context)
 
 def about_us(request):
@@ -12,6 +12,10 @@ def about_us(request):
 def contact(request):
     context = { 'page' : 'contact' }
     return render(request, 'website/contact.html', context)
+
+def cabang(request):
+    context = { 'page' : 'cabang', 'cabang_list' : Cabang.objects.all() }
+    return render(request, 'website/cabang.html', context)
 
 def loker_jabar(request):
     data_loker = LowonganKerja.objects.filter(daerah="JABAR")

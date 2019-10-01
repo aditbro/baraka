@@ -38,7 +38,7 @@ class DataBarang(models.Model):
     class Meta:
         verbose_name_plural = "Data Barang"
 
-class Cabang(models.Model):
+class Area(models.Model):
     lokasi = models.CharField(max_length=long_text)
     singkatan = models.CharField(max_length=short_text)
     file_ongkos_kirim = models.CharField(max_length=long_text)
@@ -46,5 +46,25 @@ class Cabang(models.Model):
     def __str__(self):
         return self.lokasi
         
+    class Meta:
+        verbose_name_plural = "Areas"
+
+class Cabang(models.Model):
+    lokasi = models.CharField(max_length=long_text)
+    area = models.ForeignKey(Area, on_delete=models.CASCADE, blank=True, null=True)
+    kode = models.CharField(max_length=short_text)
+    status = models.CharField(max_length=short_text)
+    alamat = models.CharField(max_length=long_text)
+    no_telp = models.CharField(max_length=short_text)
+
+    def __str__(self):
+        area = self.area
+        if(not area):
+            area = ""
+        else :
+            area = area.lokasi
+            
+        return self.lokasi + ", " + area
+
     class Meta:
         verbose_name_plural = "Cabang"

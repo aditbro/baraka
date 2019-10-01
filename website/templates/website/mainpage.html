@@ -43,7 +43,7 @@
           <div class="col-md-6">
             <select class="form-control" id="tarif-from">
               <option disabled selected></option>
-              {% for cabang in cabang_list %}
+              {% for cabang in area_list %}
                   <option value="{{ cabang.file_ongkos_kirim }}">{{ cabang.lokasi }}</option>
               {% endfor %}
             </select>
@@ -54,7 +54,7 @@
           <div class="col-md-6">
             <select class="form-control" id="tarif-to">
               <option disabled selected></option>
-              {% for cabang in cabang_list %}
+              {% for cabang in area_list %}
                   <option id="cabang-opt-{{ cabang.lokasi }}" value="{{ cabang.lokasi }}">{{ cabang.lokasi }}</option>
               {% endfor %}
             </select>
